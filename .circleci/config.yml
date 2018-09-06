@@ -65,7 +65,17 @@ defaults: &defaults
 
 
 jobs:
-    build:
+    chemistry:
       <<: *defaults
       environment:
           TERMINUS_SITE: hed-chemistry
+    english:
+      <<: *defaults
+      environment:
+          TERMINUS_SITE: hed-english
+workflows:
+  version: 2
+  autodeploy_to_sites:
+    jobs:
+      - chemistry
+      - english
