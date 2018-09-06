@@ -67,3 +67,5 @@ defaults: &defaults
 jobs:
     build:
       <<: *defaults
+      environment:
+          TERMINUS_SITE: hed-chemistry
