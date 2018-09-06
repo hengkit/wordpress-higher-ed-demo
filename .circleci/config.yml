@@ -9,6 +9,7 @@ jobs:
             BASH_ENV: ~/.bashrc
             TZ: "/usr/share/zoneinfo/America/Los_Angeles"
             TERMINUS_SITE: hed-chemistry
+            STAMP: 123412341234
         steps:
             - checkout
             - run:
@@ -16,7 +17,7 @@ jobs:
                 command: |
                   terminus auth:login -n --machine-token="$TERMINUS_TOKEN"
             - run:
-                name: gitting
+                name: set up
                 command: |
                   touch $HOME/.ssh/config
                   echo "StrictHostKeyChecking no" >> "$HOME/.ssh/config"
@@ -24,7 +25,9 @@ jobs:
                   git config --global user.email "noreply@pantheon.io"
                   git config --global user.name "CircleCI automation"
 
-                  export STAMP=`date +%s`
+            - run:
+                name: fetch, merge, tag
+                command: |
                   git fetch
                   git remote add $TERMINUS_SITE $(terminus connection:info $TERMINUS_SITE.dev --field=git_url)
                   git fetch $TERMINUS_SITE
@@ -36,15 +39,25 @@ jobs:
 
                   git tag -a -m "hotfixing from ci" ${TERMINUS_SITE}_${STAMP}
 
+            - run:
+                name: push live
+                command: |
+
                   export CURRENT_LIVE_TAG_NUMBER=$(git tag | grep pantheon_live_ | sort -k1.15n | tail -1 | cut -c 15-)
                   export NEXT_LIVE_TAG_NUMBER=$(($CURRENT_LIVE_TAG_NUMBER+1))
                   git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:pantheon_live_${NEXT_LIVE_TAG_NUMBER}
 
+            - run:
+                name: push test
+                command: |
 
                   export CURRENT_TEST_TAG_NUMBER=$(git tag | grep pantheon_test_ | sort -k1.15n | tail -1 | cut -c 15-)
                   export NEXT_TEST_TAG_NUMBER=$(($CURRENT_TEST_TAG_NUMBER+1))
                   git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:pantheon_test_${NEXT_TEST_TAG_NUMBER}
 
+            - run:
+                name: push dev
+                command: |
                   terminus connection:set ${TERMINUS_SITE}.dev git
                   git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}_branch:master
                   git remote remove $TERMINUS_SITE
