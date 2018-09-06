@@ -32,7 +32,7 @@ jobs:
 
                   git checkout -b ${TERMINUS_SITE}_${STAMP}_branch
 
-                  git merge origin/master
+                  git merge origin/master --no-edit
 
                   git tag -a -m "hotfixing from ci" ${TERMINUS_SITE}_${STAMP}
 
