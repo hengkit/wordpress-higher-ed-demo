@@ -9,6 +9,12 @@
  */
 
 /**
+ * Customization used by all Demo University Sites
+ *
+ */
+require_once(dirname(__FILE__) . '/wp-config-demo.php');
+
+/**
  * Local configuration information.
  *
  * If you are working in a local/desktop development environment and want to
