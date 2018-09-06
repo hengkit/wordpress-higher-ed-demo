@@ -1,0 +1,43 @@
+version: 2
+# https://circleci.com/docs/configuration#machine
+jobs:
+    # @todo, separate build and test phases.
+    build:
+        docker:
+            - image: quay.io/pantheon-public/build-tools-ci:1.x
+        working_directory: ~/working
+        environment:
+            BASH_ENV: ~/.bashrc
+            TZ: "/usr/share/zoneinfo/America/Los_Angeles"
+            TERMINUS_SITE: hed-chemistry
+        steps:
+            - checkout
+            - run:
+                name: login-pantheon
+                command: |
+                  terminus auth:login -n --machine-token="$TERMINUS_TOKEN"
+            - run:
+                name: gitting
+                command: |
+                  touch $HOME/.ssh/config
+                  echo "StrictHostKeyChecking no" >> "$HOME/.ssh/config"
+
+                  git config --global user.email "noreply@pantheon.io"
+                  git config --global user.name "CircleCI automation"
+
+                  export STAMP=`date +%s`
+                  git fetch
+                  git remote add $TERMINUS_SITE $(terminus connection:info $TERMINUS_SITE.dev --field=git_url)
+                  git fetch $TERMINUS_SITE
+                  git checkout $TERMINUS_SITE/master
+
+                  git checkout -b ${TERMINUS_SITE}_${STAMP}_branch
+
+                  git merge origin/master
+
+                  git tag -a -m "hotfixing from ci" ${TERMINUS_SITE}_${STAMP}
+                  git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:pantheon_live_${STAMP}
+                  git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:pantheon_dev_${STAMP}
+                  terminus connection:set ${TERMINUS_SITE}.dev git
+                  git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}_branch:master
+                  git remote remove $TERMINUS_SITE
