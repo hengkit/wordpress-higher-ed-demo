@@ -38,7 +38,7 @@ jobs:
 
                   export CURRENT_LIVE_TAG_NUMBER=$(git tag | grep pantheon_live_ | sort -k1.15n | tail -1 | cut -c 15-)
                   export NEXT_LIVE_TAG_NUMBER=$(($CURRENT_LIVE_TAG_NUMBER+1))
-                  git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:${NEXT_LIVE_TAG_NUMBER}
+                  git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:pantheon_live_${NEXT_LIVE_TAG_NUMBER}
 
 
                   export CURRENT_TEST_TAG_NUMBER=$(git tag | grep pantheon_test_ | sort -k1.15n | tail -1 | cut -c 15-)
