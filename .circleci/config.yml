@@ -35,8 +35,16 @@ jobs:
                   git merge origin/master
 
                   git tag -a -m "hotfixing from ci" ${TERMINUS_SITE}_${STAMP}
-                  git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:pantheon_live_${STAMP}
-                  git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:pantheon_dev_${STAMP}
+
+                  export CURRENT_LIVE_TAG_NUMBER=$(git tag | grep pantheon_live_ | sort -k1.15n | tail -1 | cut -c 15-)
+                  export NEXT_LIVE_TAG_NUMBER=$(($CURRENT_LIVE_TAG_NUMBER+1))
+                  git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:${NEXT_LIVE_TAG_NUMBER}
+
+
+                  export CURRENT_TEST_TAG_NUMBER=$(git tag | grep pantheon_test_ | sort -k1.15n | tail -1 | cut -c 15-)
+                  export NEXT_TEST_TAG_NUMBER=$(($CURRENT_TEST_TAG_NUMBER+1))
+                  git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}:pantheon_test_${NEXT_TEST_TAG_NUMBER}
+
                   terminus connection:set ${TERMINUS_SITE}.dev git
                   git push $TERMINUS_SITE ${TERMINUS_SITE}_${STAMP}_branch:master
                   git remote remove $TERMINUS_SITE
