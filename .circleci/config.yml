@@ -73,9 +73,14 @@ jobs:
       <<: *defaults
       environment:
           TERMINUS_SITE: hed-english
+    biology:
+      <<: *defaults
+      environment:
+          TERMINUS_SITE: hed-biology
 workflows:
   version: 2
   autodeploy_to_sites:
     jobs:
       - chemistry
       - english
+      - biology
