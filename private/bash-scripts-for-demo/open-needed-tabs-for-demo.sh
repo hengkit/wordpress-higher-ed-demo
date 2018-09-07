@@ -7,5 +7,5 @@ open -a /Applications/Firefox.app \
   https://live-hed-biology.pantheonsite.io/ \
   https://live-hed-biology.pantheonsite.io/ \
   https://live-hed-biology.pantheonsite.io/ \
-  https://github.com/stevector/wordpress-higher-ed-demo 
+  https://github.com/stevector/wordpress-higher-ed-demo
 
