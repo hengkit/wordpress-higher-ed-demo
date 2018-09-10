@@ -20,7 +20,7 @@
 			<?php else : ?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> :)</p>
 			<?php endif; ?>
-						<p class="site-description">Apply now</p>  
+						<p class="site-description">Apply to join the class of 2023</p>  
 
 
 		<?php if ( ( twentyseventeen_is_frontpage() || ( is_home() && is_front_page() ) ) && ! has_nav_menu( 'top' ) ) : ?>
