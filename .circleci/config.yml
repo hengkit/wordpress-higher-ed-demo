@@ -65,22 +65,22 @@ defaults: &defaults
 
 
 jobs:
-    chemistry:
+    creative_writing:
       <<: *defaults
       environment:
-          TERMINUS_SITE: hed-chemistry
-    english:
+          TERMINUS_SITE: hed-creative-writing
+    electrical_engineering:
       <<: *defaults
       environment:
-          TERMINUS_SITE: hed-english
-    biology:
+          TERMINUS_SITE: hed-ee
+    anthropology:
       <<: *defaults
       environment:
-          TERMINUS_SITE: hed-biology
+          TERMINUS_SITE: hed-anthropology
 workflows:
   version: 2
   autodeploy_to_sites:
     jobs:
-      - chemistry
-      - english
-      - biology
+      - creative_writing
+      - electrical_engineering
+      - anthropology
