@@ -45,7 +45,7 @@ class EDU_Demo_Hero_Header extends WP_Widget {
 
 
         $site_name = "Sample Jumbotron";
-        echo '<div class="jumbotron py-5 jumbotron-fluid bg-primary text-white" style="border-top: 1px solid rgba(255,255,255,.1);">
+        echo '<div class="jumbotron py-5 jumbotron-fluid bg-primary text-white" style="background-image: url(https://image.shutterstock.com/z/stock-photo-teenagers-young-team-together-cheerful-concept-337964138.jpg); background-repeat: no-repeat; background-position: center">
 <div class="container py-5">
 	<div class="row">
 		<div class="col-md-7">
