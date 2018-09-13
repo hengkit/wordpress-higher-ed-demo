@@ -39,8 +39,8 @@ class EDU_Demo_Hero_Header extends WP_Widget {
         }
 
 //        $pantheon_site_machine_name = 'hed-creative-writing';
-   //     $pantheon_site_machine_name = 'hed-anthropology';
-        // $pantheon_site_machine_name = 'hed-ee';
+  //      $pantheon_site_machine_name = 'hed-anthropology';
+//        $pantheon_site_machine_name = 'hed-ee';
 
         $background_position = 'center';
         $padding = "pt-5 pb-5";
@@ -75,7 +75,7 @@ class EDU_Demo_Hero_Header extends WP_Widget {
             $padding = "pt-3 pb-5";
             $columns = 'col-md-5';
         }
-        echo '<div class="jumbotron jumbotron-fluid bg-primary" style="height: '. $height . '; background-image: url(' . get_theme_root_uri() . '/understrap-child/images/' . $image . '); background-repeat: no-repeat; background-position: '. $background_position . '; background-size: cover" >
+        echo '<div class="jumbotron jumbotron-fluid bg-primary" style="height: '. $height . '; background-image: url(http://dev-alumni-magazine.pantheonsite.io/sites/default/files/images/' . $image . '); background-repeat: no-repeat; background-position: '. $background_position . '; background-size: cover" >
 <div class="container ' . $padding.'">
 	<div class="row">
 		<div class="' . $columns . ' bg-transparent-white">
