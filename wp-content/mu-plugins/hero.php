@@ -57,7 +57,7 @@ class EDU_Demo_Hero_Header extends WP_Widget {
 		<div class="col-md-7">
 <h1 class="display-3">'.$h1 .'</h1>
 	<p class="lead">'. $lead . '</p>
-<a class="btn btn-success btn-lg py-3" href="https://gumroad.com/l/CQrW">Apply Now</a><br/>
+<a class="btn btn-department-highlight btn-lg py-3" href="#">Apply Now</a><br/>
 <a class="btn btn-sm btn-link text-white-50" href="#" role="button">See our majors</a>
 <a class="btn btn-sm btn-link text-white-50" href="#" role="button">Course list</a>
 </div>
