@@ -10799,8 +10799,23 @@ a.skip-link {
   background-color: #181D21;
   color: #EFD01B; }
 
+.bg-university-global h1 {
+  background-color: #181D21; }
+
 .btn-department-highlight {
   background-color: #DDE5E7; }
 
 .navbar-dark .navbar-nav .nav-link {
   color: #EEF2F3; }
+
+.denim-department .bg-transparent-white h1 {
+  color: #44525E; }
+
+.denim-department .bg-transparent-white p {
+  color: #313945; }
+
+.denim-department .bg-transparent-white a {
+  color: #181D21; }
+
+.bg-transparent-white {
+  background-color: rgba(255, 255, 255, 0.8); }
