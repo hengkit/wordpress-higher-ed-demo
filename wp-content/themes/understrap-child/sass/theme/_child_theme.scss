@@ -9,6 +9,10 @@
   color: $lightning;
 }
 
+.bg-university-global h1 {
+  background-color: $pitch;
+}
+
 
 .btn-department-highlight {
   background-color: $milk;
@@ -20,3 +24,20 @@
   color: $ash;
 }
 
+.denim-department .bg-transparent-white h1 {
+  color: $denim
+}
+
+.denim-department .bg-transparent-white p {
+  color: $midnight;
+}
+
+.denim-department .bg-transparent-white a {
+  color: $pitch;
+}
+
+
+.bg-transparent-white {
+
+  background-color:rgba(255, 255, 255, 0.8);
+}
