@@ -28,7 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("denim-department"); ?>>
 
 <div class="hfeed site" id="page">
 
