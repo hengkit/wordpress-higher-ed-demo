@@ -82,7 +82,7 @@ class EDU_Demo_Hero_Header extends WP_Widget {
             $padding = "pt-3 pb-5";
             $columns = 'col-md-5';
         }
-        echo '<div class="jumbotron jumbotron-fluid bg-primary" style="height: '. $height . '; background-image: url(http://dev-alumni-magazine.pantheonsite.io/sites/default/files/images/' . $image . '); background-repeat: no-repeat; background-position: '. $background_position . '; background-size: cover" >
+        echo '<div class="jumbotron jumbotron-fluid bg-primary" style="height: '. $height . '; background-image: url(https://dev-alumni-magazine.pantheonsite.io/sites/default/files/images/' . $image . '); background-repeat: no-repeat; background-position: '. $background_position . '; background-size: cover" >
 <div class="container ' . $padding.'">
 	<div class="row">
 		<div class="' . $columns . ' bg-transparent-white">
