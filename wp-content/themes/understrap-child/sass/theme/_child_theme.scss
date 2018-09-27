@@ -5,39 +5,58 @@
 
 .bg-university-global {
 
-  background-color: $pitch;
+  background-color: $black;
   color: $lightning;
 }
 
 .bg-university-global h1 {
-  background-color: $pitch;
-}
-
-
-.btn-department-highlight {
-  background-color: $milk;
-
 }
 
 .navbar-dark .navbar-nav .nav-link {
-
   color: $ash;
 }
 
-.denim-department .bg-transparent-white h1 {
-  color: $denim
+
+.jumbotron-fluid.light {
+  .bg-semi-transparent {
+    background-color:rgba(255, 255, 255, 0.8);
+  }
+  h1 {
+    color: $denim;
+  }
+
+  p {
+    color: $midnight;
+  }
+
+  a {
+    color: $pitch;
+  }
+  a.btn-lG.highlight {
+    background-color: $lightning;
+    color: $midnight;
+  }
 }
 
-.denim-department .bg-transparent-white p {
-  color: $midnight;
+.jumbotron-fluid.dark {
+  .bg-semi-transparent {
+    background-color:rgba(25, 25, 25, 0.8);
+  }
+  h1 {
+    color: $milk;
+  }
+
+  p {
+    color: $ash;
+  }
+  a {
+    color: $milk;
+  }
+
+
+  a.btn-lG.highlight {
+    background-color: $cyan;
+    color: $ash;
+  }
 }
 
-.denim-department .bg-transparent-white a {
-  color: $pitch;
-}
-
-
-.bg-transparent-white {
-
-  background-color:rgba(255, 255, 255, 0.8);
-}
