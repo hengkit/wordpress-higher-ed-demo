@@ -105,6 +105,7 @@ class EDU_Demo_Hero_Header extends WP_Widget {
             $image = 'shutterstock_327572696.jpg';
             $columns = 'col-md-5';
             $light_dark = 'dark';
+            $height= "700px";
         } else if ($pantheon_site_machine_name === 'hed-creative-writing') {
 
             $h1 = "A Novel Approach to Writing";
