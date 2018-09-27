@@ -13,8 +13,6 @@ open -a /Applications/Firefox.app \
     "https://dashboard.pantheon.io/organizations/89353d44-3e31-4fb0-b9c9-c8b21d9bdbda#support" \
     https://pantheon.io/edu \
 
-
-
 export LOGIN1=$(terminus wp hed-creative-writing.live --  user one-time-login admin)
 export LOGIN2=$(terminus wp hed-ee.live               --  user one-time-login admin)
 export LOGIN3=$(terminus wp hed-anthropology.live     --  user one-time-login admin)
