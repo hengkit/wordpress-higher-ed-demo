@@ -82,12 +82,12 @@ class EDU_Demo_Hero_Header extends WP_Widget {
 
         // $pantheon_site_machine_name = 'hed-creative-writing';
         // $pantheon_site_machine_name = 'hed-anthropology';
-        //  $pantheon_site_machine_name = 'hed-ee';
+        // $pantheon_site_machine_name = 'hed-ee';
         $cta = $this->cta_text();
         $background_position = 'center';
         $padding = "pt-5 pb-5";
         $height = "auto";
-        $light_dark = 'dark';
+        $light_dark = 'light';
 
         if ($pantheon_site_machine_name === 'hed-anthropology') {
             $h1 = "Explore Humanity's History";
@@ -100,7 +100,7 @@ class EDU_Demo_Hero_Header extends WP_Widget {
             $lead = "Be on the cutting edge of the next technological revolution";
             $image = 'shutterstock_327572696.jpg';
             $columns = 'col-md-5';
-            $light_dark = 'light';
+            $light_dark = 'dark';
         } else if ($pantheon_site_machine_name === 'hed-creative-writing') {
 
             $h1 = "A Novel Approach to Writing";
