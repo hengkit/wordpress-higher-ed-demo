@@ -17,6 +17,73 @@ add_action(
 
 class EDU_Demo_Hero_Header extends WP_Widget {
 
+    public function widget( $args, $instance ) {
+
+        // This is the section to edit in the demo.
+        $button_classes = 'btn btn-lG highlight';
+        $button_classes = 'btn btn-lG';
+
+        if (!empty($_SERVER['PANTHEON_SITE_NAME'])) {
+            $pantheon_site_machine_name = $_SERVER['PANTHEON_SITE_NAME'];
+        } else {
+            $pantheon_site_machine_name = '';
+        }
+
+        $cta = $this->cta_text();
+        $background_position = 'center';
+        $padding = "pt-5 pb-5";
+        $height = "auto";
+        $light_dark = 'light';
+
+        if ($pantheon_site_machine_name === 'hed-anthropology') {
+            $h1 = "Explore Humanity's History";
+            $lead = "Uncovering new truth through the biological, cognitive, and social sciences";
+            $image = "shutterstock_222382861.jpg";
+
+            $columns = 'col-md-5';
+        } else if ($pantheon_site_machine_name === 'hed-ee') {
+            $h1 = "Reach Your Full Potential";
+            $lead = "Be on the cutting edge of the next technological revolution";
+            $image = 'shutterstock_327572696.jpg';
+            $columns = 'col-md-5';
+            $light_dark = 'dark';
+            $height= "700px";
+        } else if ($pantheon_site_machine_name === 'hed-creative-writing') {
+
+            $h1 = "A Novel Approach to Writing";
+            $lead = "Our supportive faculty will help you write your truth";
+            $padding = "pt-3 pb-5";
+            $columns = 'col-md-12';
+            $image = "shutterstock_320092919.jpg";
+            $background_position= 'bottom';
+            $height= "600px";
+
+        } else {
+            $h1 = "Preparation for Tomorrow";
+            $lead = "Learn the fundamentals today and be ready for whatever the future holds";
+            $image = "shutterstock_669390109.jpg";
+
+            $padding = "pt-3 pb-5";
+            $columns = 'col-md-5';
+            $light_dark = 'light';
+        }
+
+        echo '<div class="jumbotron jumbotron-fluid bg-primary ' . $light_dark . '" style="height: '. $height . '; background-image: url(https://dev-alumni-magazine.pantheonsite.io/sites/default/files/images/' . $image . '); background-repeat: no-repeat; background-position: '. $background_position . '; background-size: cover" >
+            <div class="container ' . $padding.'">
+	            <div class="row">
+		            <div class="' . $columns . ' bg-semi-transparent">
+		                <h1 class="display-3">'.$h1 .'</h1>
+			            <p class="lead">'. $lead . '</p>
+		                <a class="'.$button_classes .'" href="#">'. $cta . '</a><br/>
+		                <a class="btn btn-sm btn-link" href="#" role="button">See our majors</a>
+		                <a class="btn btn-sm btn-link" href="#" role="button">Course list</a>
+		            </div>
+		        </div>
+            </div>
+        </div>';
+
+    }
+
     /**
      * Sets up a new Tag Cloud widget instance.
      *
@@ -72,75 +139,6 @@ class EDU_Demo_Hero_Header extends WP_Widget {
     }
 */
 
-    public function widget( $args, $instance ) {
 
-        // This is the section to edit in the demo.
-        $button_classes = 'btn btn-lG highlight';
-        // $button_classes = 'btn btn-lG';
-
-        if (!empty($_SERVER['PANTHEON_SITE_NAME'])) {
-            $pantheon_site_machine_name = $_SERVER['PANTHEON_SITE_NAME'];
-        } else {
-            $pantheon_site_machine_name = '';
-        }
-
-        // $pantheon_site_machine_name = 'hed-creative-writing';
-        // $pantheon_site_machine_name = 'hed-anthropology';
-        // $pantheon_site_machine_name = 'hed-ee';
-        $cta = $this->cta_text();
-        $background_position = 'center';
-        $padding = "pt-5 pb-5";
-        $height = "auto";
-        $light_dark = 'light';
-
-        if ($pantheon_site_machine_name === 'hed-anthropology') {
-            $h1 = "Explore Humanity's History";
-            $lead = "Uncovering new truth through the biological, cognitive, and social sciences";
-            $image = "shutterstock_222382861.jpg";
-
-            $columns = 'col-md-5';
-        } else if ($pantheon_site_machine_name === 'hed-ee') {
-            $h1 = "Reach Your Full Potential";
-            $lead = "Be on the cutting edge of the next technological revolution";
-            $image = 'shutterstock_327572696.jpg';
-            $columns = 'col-md-5';
-            $light_dark = 'dark';
-            $height= "700px";
-        } else if ($pantheon_site_machine_name === 'hed-creative-writing') {
-
-            $h1 = "A Novel Approach to Writing";
-            $lead = "Our supportive faculty will help you write your truth";
-            $padding = "pt-3 pb-5";
-            $columns = 'col-md-12';
-            $image = "shutterstock_320092919.jpg";
-            $background_position= 'bottom';
-            $height= "600px";
-
-        } else {
-            $h1 = "Preparation for Tomorrow";
-            $lead = "Learn the fundamentals today and be ready for whatever the future holds";
-            $image = "shutterstock_669390109.jpg";
-
-            $padding = "pt-3 pb-5";
-            $columns = 'col-md-5';
-            $light_dark = 'light';
-        }
-
-        echo '<div class="jumbotron jumbotron-fluid bg-primary ' . $light_dark . '" style="height: '. $height . '; background-image: url(https://dev-alumni-magazine.pantheonsite.io/sites/default/files/images/' . $image . '); background-repeat: no-repeat; background-position: '. $background_position . '; background-size: cover" >
-            <div class="container ' . $padding.'">
-	            <div class="row">
-		            <div class="' . $columns . ' bg-semi-transparent">
-		                <h1 class="display-3">'.$h1 .'</h1>
-			            <p class="lead">'. $lead . '</p>
-		                <a class="'.$button_classes .'" href="#">'. $cta . '</a><br/>
-		                <a class="btn btn-sm btn-link" href="#" role="button">See our majors</a>
-		                <a class="btn btn-sm btn-link" href="#" role="button">Course list</a>
-		            </div>
-		        </div>
-            </div>
-        </div>';
-
-
-    }
 
 }
