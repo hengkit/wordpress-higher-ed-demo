@@ -98,7 +98,7 @@ class EDU_Demo_Hero_Header extends WP_Widget {
     }
 
     public function cta_text() {
-        return 'Apply now to join our next freshman class';
+        return 'Apply now to join our next freshman class in 2019';
     }
 
 
