@@ -38,8 +38,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <nav class="navbar navbar-expand-md navbar-dark bg-university-global">
             <div class="container" >
-                <!-- <img src="<?php print get_theme_root_uri() . '/understrap-child/Pantheon_Fist_color_rev.svg' ?>" />   -->
-            <h1>Demo University</h1>
+
+            <h1 class="demo-crest"><img style="height: 100px; margin-right: 20px" src="<?php print get_theme_root_uri() . '/understrap-child/images/Demo-University-white.png' ?>" />Demo University</h1>
             </div>
         </nav>
 
