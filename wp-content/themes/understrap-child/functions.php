@@ -22,8 +22,12 @@ function theme_enqueue_styles() {
     $js_file = '/js/child-theme.min.js';
 	wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . $js_file, array(), sha1_file(__DIR__ . $js_file), true );
 
-    $js_file = '/js/favicon-updater.js';
-    wp_enqueue_script( 'favicon-updater', get_stylesheet_directory_uri() . $js_file, array(), sha1_file(__DIR__ . $js_file), true );
+
+	if (!empty($_GET['refresh-favicon'])) {
+		$js_file = '/js/favicon-updater.js';
+		wp_enqueue_script( 'favicon-updater', get_stylesheet_directory_uri() . $js_file, array(), sha1_file(__DIR__ . $js_file), true );
+	}
+
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
