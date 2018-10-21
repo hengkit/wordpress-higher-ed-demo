@@ -20,8 +20,8 @@ class EDU_Demo_Hero_Header extends WP_Widget {
     public function widget( $args, $instance ) {
 
         // This is the section to edit in the demo.
-        $button_classes = 'btn btn-lG';
-	// $button_classes = 'btn btn-lG highlight';
+        // $button_classes = 'btn btn-lG';
+	 $button_classes = 'btn btn-lG highlight';
 
         if (!empty($_SERVER['PANTHEON_SITE_NAME'])) {
             $pantheon_site_machine_name = $_SERVER['PANTHEON_SITE_NAME'];
