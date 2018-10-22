@@ -18,6 +18,7 @@ add_action(
 class EDU_Demo_Hero_Header extends WP_Widget {
 
 	
+	
     public function widget( $args, $instance ) {
 
         // This is the section to edit in the demo.
