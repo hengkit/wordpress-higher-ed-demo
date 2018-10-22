@@ -19,6 +19,7 @@ class EDU_Demo_Hero_Header extends WP_Widget {
 	
     public function widget( $args, $instance ) {
 
+	    
         // This is the section to edit in the demo.
          $button_classes = 'btn btn-lG';
 	//$button_classes = 'btn btn-lG highlight';
