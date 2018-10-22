@@ -1,7 +1,6 @@
 version: 2
 # https://circleci.com/docs/configuration#machine
 
-
 defaults: &defaults
   docker:
       - image: quay.io/pantheon-public/build-tools-ci:1.x
