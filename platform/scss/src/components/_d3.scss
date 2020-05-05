@@ -1,0 +1,70 @@
+
+.bgCircle {
+  fill: white;
+  opacity: 1;
+}
+.link {
+  stroke: #999;
+  stroke-opacity: 0.6;
+  stroke-width: 1px;
+  transition: all 0.2s ease;
+}
+.link.dashed {
+  stroke-dasharray: 3;
+}
+.link.active {
+  stroke-opacity: 1;
+  stroke: #313945;
+  stroke-opacity: 1;
+  stroke-width: 1px;
+  transition: all 0.2s ease;
+}
+
+// D3 Nodes
+.node {
+  .server {
+    @include basic-shadow;
+    stroke: none;
+    fill: $white;
+    position: relative;
+    transition: all 0.3s ease;
+    &.nodetext {
+      color: $black;
+    }
+  }
+  .nodeBlur {
+    stroke: none;
+    stroke-width: 1.5px;
+    pointer-events: none;
+    filter: blur(8px);
+    opacity: 0.5;
+  }
+  .bgCircle {
+    fill: $white;
+    stroke: none;
+    fill: #313945;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  &.inactive {
+    .server {
+      stroke: none;
+      // fill: $gray-light;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      * {
+        cursor: pointer;
+        fill: $gray-lighter;
+        transition: all 0.2s ease;
+        box-shadow: 1px 1px 1px $brand-secondary;
+      }
+    }
+  }
+  .icon {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

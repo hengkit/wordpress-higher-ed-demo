@@ -1,0 +1,60 @@
+// Custom Bootstrap Overrides
+
+html, body, h1, h2, h3, h4, h5, h6, p, span, a {
+  font-family: $default-font;
+}
+html, body {
+  background-color: $white;
+  overflow: hidden scroll;
+}
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1400px;
+  }
+  #fastly-modal {
+    .modal-dialog {
+      max-width: 1000px;
+    }
+  }
+}
+
+#pops {
+  .circleIcon {
+    padding: 0;
+  }
+  display: table;
+  margin: 0 auto;
+}
+
+.circleIcon {
+  img {
+    margin: 0px auto;
+    display: block;
+    position: relative;
+  }
+  display: table-cell;
+  text-align: center;
+  background: $white;
+  @include basic-shadow;
+
+  margin: 0px 10px;
+  height: 72px;
+  width: 72px;
+  border-radius: 36px;
+  display: block;
+  padding: 16px 0;
+  float: left;
+  transition: all 0.5s ease;
+}
+
+#ember248 {
+  &, &.emerge { 
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+}
+
+.cdn-map {
+  width: 100%;
+}

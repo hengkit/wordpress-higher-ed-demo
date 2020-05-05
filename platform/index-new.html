@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>The Pantheon Platform</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="dist/css/demo.css" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/ico" href="//pantheon.io/favicon.ico" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <script type="text/x-handlebars" id="application">
+      {{view App.NavView}}
+      {{view App.DiagramView}}
+      {{view App.InfobarView}}
+    </script>
+
+    <!-- NAVBAR START -->
+    <script type="text/x-handlebars" data-template-name="nav">
+
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top" role="navigation">
+
+          <a class="navbar-brand logo">
+              <!-- <img src="img/pantheon-fist-icon.svg" class=""> -->
+              <span class="logo-text">The Pantheon Platform</span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#demo-navbar" aria-controls="demo-navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="demo-navbar">
+
+            <ul class="navbar-nav mr-auto">
+                <li class='nav-item dev'><a class="nav-link" href="#/diagram/dev">Dev</a></li>
+                <li class='nav-item test'><a class="nav-link" href="#/diagram/test">Test</a></li>
+                <li class='nav-item live'><a class="nav-link" href="#/diagram/live">Live</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="service-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Service Level: <span>Performance (Small)</span> <b class="glyphicon glyphicon-chevron-down"></b></a>
+                    <ul class="dropdown-menu" aria-labelledby="service-dropdown">
+                        <li class="dropdown-item basic"><a class="" href="#/diagram/basic">Basic</a></li>
+                        <li class="performancesmall dropdown-item dropdown-submenu-header">
+                            <a class="dropdown-header" href="#/diagram/performancesmall">Performance</a>
+                            <ul class="dropdown-submenu">
+                                <li class="performancesmall dropdown-item"><a class="" href="#/diagram/performancesmall">Small</a></li>
+                                <li class="performancemedium dropdown-item"><a class="" href="#/diagram/performancemedium">Medium</a></li>
+                                <li class="performancelarge dropdown-item"><a class="" href="#/diagram/performancelarge">Large</a></li>
+                                <li class="performancexl dropdown-item"><a class="" href="#/diagram/performancexl">Extra Large</a></li>
+                            </ul>
+                        </li>
+                        <li class="elite dropdown-item"><a class="" href="#/diagram/elite">Elite</a></li>
+                        <li class="elitemax dropdown-item"><a class="" href="#/diagram/elitemax">Elite Traffic Spike</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav my-2 my-lg-0">
+              <li class="link multiplesites"><a href="#/diagram/multiplesites">Multiple Sites</a></li>
+              <li class="link disaster"><a href="#/diagram/disaster">Disaster Recovery</a></li>
+            </ul>
+          </div>
+        </nav>
+    </script>
+    <!-- NAVBAR END -->
+
+    <!-- DIAGRAM START -->
+    <script type="text/x-handlebars" data-template-name="diagram">
+      <div id="internet" class="demo-container-section">
+          <div class="col-md-4 container-title">
+          <h4 class="with-subtitle">Incoming traffic</h4>
+          <h5 class="subtitle">Up to 125K/month</h5>
+          </div>
+          <div id="thecloud" class="col-md-8 container-content">
+            <div class="circleIcon">
+              <img src="img/incoming-traffic.svg" />
+            </div>
+          </div>
+        </div>
+        <div id="edge" class="demo-container-section">
+          <div class="col-md-4 container-title">
+              <h4 class="with-subtitle">Managed HTTPS via Let's Encrypt <img src="img/le-logo-lockonly.svg" /></h4>
+              <h5 class="subtitle">Global CDN with <strong>37.5 Tbps</strong> in Capacity</h5>
+          </div>
+            <div id="globalcdn" class="col-md-8 container-content">
+              <a class="modal-link" alt="Pantheon's Global CDN" height="120" data-toggle="modal" data-target="#myModal" />&nbsp;</a>
+            </div>
+          </div>
+          <div id="diagramContainer" class="demo-container-section">
+              <div class="col-md-4 container-title">
+              <h4 id="pantheon-data-center-main-title">Pantheon Data Center <img src="img/google-cloud.svg" /></h4>
+              <h5 class="subtitle">Google North America Zone #1</h5>
+              </div>
+              <div id="disaster-content" class="col-md-12">
+                <div class="disaster-graph first">
+                  <p class="title"><strong>Pantheon Data Center <img src="img/google-cloud.svg" /></strong> <span>/</span> Main</p>
+                </div>
+                <div class="disaster-graph second">
+                  <p class="title"><strong>Pantheon Data Center <img src="img/google-cloud.svg" /></strong> <span>/</span> Fail Over</p>
+                </div>
+                <div id="arrow-slider">
+                  <p class="sync-text">Sync</p>
+                  <div class="arrow-sliding">
+                    <div class="arrow glyphicon glyphicon-menu-right"></div>
+                  </div>
+                  <div class="arrow-sliding delay1">
+                    <div class="arrow glyphicon glyphicon-menu-right"></div>
+                  </div>
+                  <div class="arrow-sliding delay2">
+                    <div class="arrow glyphicon glyphicon-menu-right"></div>
+                  </div>
+                  <div class="arrow-sliding delay3">
+                    <div class="arrow glyphicon glyphicon-menu-right"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </script>
+    <!-- DIAGRAM END -->
+
+    <!-- INFO BOX HOLDERS -->
+    <script type="text/x-handlebars" data-template-name="infobarContainer">
+      <div id="infobarContainer" class="hidden">
+          {{view App.InfobarContentView}}
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="infobarContent">
+      <div class="infobarContent">
+          <div class="header">
+              <div class="headerIconWrapper">
+              <img class='headerIcon'/>
+              </div>
+              <h1>{{controller.title}}</h1>
+          </div>
+          <div class="body">
+          <p>{{{controller.text}}}</p>
+          </div>
+      </div>
+    </script>
+    <!-- INFO BOX HOLDERS -->
+
+    <!------ SCRIPTS START ------>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ember.js/1.5.1/ember.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- <script src="dist/js/demo.js"></script> -->
+    <script src="js/graph.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/main.js"></script>
+    <!------ SCRIPTS END ------>
+  </body>
+</html>

@@ -1,12 +1,6 @@
 {
     "servers": [
         {
-            "id": "AAAAAAAA",
-            "type": "edgeserver",
-            "endpoint": "edge1",
-            "slave_of": null
-        },
-        {
             "id": "925e7577",
             "endpoint": "5aadf118-609f-4b81-8a53-05402afb1958",
             "type": "appserver",

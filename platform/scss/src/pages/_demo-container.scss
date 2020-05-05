@@ -1,0 +1,94 @@
+// Utils
+.background-gray-lighter {
+	background-color: $gray-lighter;
+}
+
+.background-gray-blue {
+	background-color: #E9ECEF;
+}
+
+
+// Most demo containers
+.demo-container-section {
+	padding: 1em;
+	h4 {
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 0.3px;
+		text-transform: uppercase;
+		position: relative;
+		margin-bottom: 0.5em;
+		img {
+			// position: absolute;
+			height: 30px;
+			right: 30px;
+			vertical-align: sub;
+			margin-left: 15px;
+		}
+	}
+	h5.subtitle {
+		font-weight: 400;
+		font-size: 17.5px;
+		line-height: 17.5px;
+		letter-spacing: -0.13px;
+		color: $gray;
+	}
+}
+h4#pantheon-data-center-multisite-title {
+	display: none;
+}
+
+/*-------------------- INTERNET CONTAINER -------------------------*/
+#internet {
+	// Placeholder
+}
+
+#thecloud {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*-------------------- EDGE CONTAINER -------------------------*/
+#edge {
+	// Placeholder
+}
+#globalcdn {
+	a {
+		display: flex;
+    	justify-content: center;
+		align-items: center;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+  
+/*-------------------- DIAGRAM CONTAINER -------------------------*/
+
+#diagramContainer {
+	width: auto !important;
+	overflow: hidden;
+	position: relative;
+	background-color: $white;
+	> svg {
+	  width: auto !important;
+	  margin: 0 auto;
+	}
+	.container-title {
+		a {
+			color: inherit;
+		}
+	}
+	&.disaster-container, &.multiplesites-container {
+		#graph-container {
+			display: none;
+		}
+	}
+  }
+
+  #disaster-content {
+	  img {
+		max-height: 525px;
+	  }
+  }

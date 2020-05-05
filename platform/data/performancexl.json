@@ -1,12 +1,6 @@
 {
     "servers": [
         {
-            "id": "AAAAAAAA",
-            "type": "edgeserver",
-            "endpoint": "edge1",
-            "slave_of": null
-        },
-        {
             "id": "20fff1ee",
             "endpoint": null,
             "type": "newrelic",
@@ -14,19 +8,31 @@
         },
         {
             "id": "90ea0d97",
-            "endpoint": "8fcefc92-b32e-479f-b981-2fd1c56d1f3d",
+            "endpoint": "6fcefc92-b32e-479f-b981-2fd1c56d1f3d",
             "type": "appserver",
             "slave_of": null
         },
         {
-            "id": "4b95e834",
+            "id": "80ea0d97",
+            "endpoint": "5fcefc92-b32e-479f-b981-2fd1c56d1f3d",
+            "type": "appserver",
+            "slave_of": null
+        },
+        {
+            "id": "70ea0d97",
+            "endpoint": "4fcefc92-b32e-479f-b981-2fd1c56d1f3d",
+            "type": "appserver",
+            "slave_of": null
+        },
+        {
+            "id": "pxl4b95e834",
             "endpoint": null,
             "type": "fileserver",
             "slave_of": null
         },
         {
-            "id": "8f3dd851",
-            "endpoint": "f52710bc-99ef-47ba-81fd-a82b34f35db7",
+            "id": "40ea0d97",
+            "endpoint": "1fcefc92-b32e-479f-b981-2fd1c56d1f3d",
             "type": "appserver",
             "slave_of": null
         },
@@ -37,8 +43,8 @@
             "slave_of": null
         },
         {
-            "id": "ee63189c",
-            "endpoint": "e065141a-12fc-4d68-87d2-9ca00a36742d",
+            "id": "pxlee63189c",
+            "endpoint": "pxle065141a-12fc-4d68-87d2-9ca00a36742d",
             "type": "dbserver",
             "slave_of": null
         },

@@ -1,0 +1,55 @@
+/* Arrow css adapted from https://codepen.io/RenMan/pen/jwWKMb */
+#arrow-slider {
+    width: 16%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8%;
+  }
+  
+  p.sync-text {
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: -115px;
+  }
+  
+  .arrow {
+    color: #EFD01B;
+    font-size: 64px;
+  }
+  
+  .arrow-sliding {
+    position: absolute;
+    -webkit-animation: slide 4s linear infinite; 
+            animation: slide 4s linear infinite;
+  }
+  
+  .delay1 {
+    -webkit-animation-delay: 1s; 
+      animation-delay: 1s;
+  }
+  .delay2 {
+    -webkit-animation-delay: 2s; 
+      animation-delay: 2s;
+  }
+  .delay3 {
+    -webkit-animation-delay: 3s; 
+      animation-delay: 3s;
+  }
+  
+  @-webkit-keyframes slide {
+      0% { opacity:0; transform: translateX(-50%); }
+     20% { opacity:1; transform: translateX(-30%); }
+     80% { opacity:1; transform: translateX(30%); }
+    100% { opacity:0; transform: translateX(50%); }
+  }
+  @keyframes slide {
+      0% { opacity:0; transform: translateX(-50%); }
+     20% { opacity:1; transform: translateX(-30%); }
+     80% { opacity:1; transform: translateX(30%); }
+    100% { opacity:0; transform: translateX(50%); }
+  }

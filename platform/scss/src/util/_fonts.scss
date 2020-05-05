@@ -1,0 +1,65 @@
+// TabletGothic fonts.
+@font-face {
+  font-family: "Tablet Gothic";
+  font-weight: 400;
+  font-style: normal;
+  src: url(../../fonts/360074_3_0.woff2) format("woff2"),
+    url(../../fonts/360074_3_0.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tablet Gothic";
+  font-weight: 400;
+  font-style: italic;
+  src: url(../../fonts/360074_2_0.woff2) format("woff2"),
+    url(../../fonts/360074_2_0.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tablet Gothic";
+  font-weight: 600;
+  font-style: normal;
+  src: url(../../fonts/360074_4_0.woff2) format("woff2"),
+    url(../../fonts/360074_4_0.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tablet Gothic";
+  font-weight: 700;
+  font-style: normal;
+  src: url(../../fonts/360074_1_0.woff2) format("woff2"),
+    url(../../fonts/360074_1_0.woff) format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Glyphicons Regular";
+  src: url("../../fonts/glyphicons-regular.eot");
+  src: url("../../fonts/glyphicons-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../fonts/glyphicons-regular.woff2") format("woff2"),
+    url("../../fonts/glyphicons-regular.woff") format("woff"),
+    url("../../fonts/glyphicons-regular.ttf") format("truetype"),
+    url("../../fonts/glyphicons-regular.svg#glyphiconsregular") format("svg");
+}
+.glyphicons {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Regular";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  vertical-align: top;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicons-wrench:before {
+  content: "\E440";
+}
+.glyphicons-equalizer:before {
+  content: "\E586";
+}
+.glyphicons-cardio:before {
+  content: "\E283";
+}

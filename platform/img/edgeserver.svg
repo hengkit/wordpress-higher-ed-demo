@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.75061,0,0,0.75061,7.4817,7.4817)">
+        <g transform="matrix(1.33374,0,0,1.34013,-10.0436,-10.1417)">
+            <path d="M51.017,11.351C51.017,10.293 50.154,9.433 49.09,9.433L10.957,9.433C9.893,9.433 9.03,10.293 9.03,11.351L9.03,20.201C9.03,21.259 9.893,22.119 10.957,22.119L49.09,22.119C50.154,22.119 51.017,21.259 51.017,20.201L51.017,11.351Z" style="fill:rgb(46,56,64);"/>
+        </g>
+        <g transform="matrix(1.33374,0,0,1.34013,-10.0436,8.89021)">
+            <path d="M51.017,11.351C51.017,10.293 50.154,9.433 49.09,9.433L10.957,9.433C9.893,9.433 9.03,10.293 9.03,11.351L9.03,20.201C9.03,21.259 9.893,22.119 10.957,22.119L49.09,22.119C50.154,22.119 51.017,21.259 51.017,20.201L51.017,11.351Z" style="fill:rgb(46,56,64);"/>
+        </g>
+        <g transform="matrix(1.33374,0,0,1.34013,-10.0436,27.8519)">
+            <path d="M51.017,11.351C51.017,10.293 50.154,9.433 49.09,9.433L10.957,9.433C9.893,9.433 9.03,10.293 9.03,11.351L9.03,20.201C9.03,21.259 9.893,22.119 10.957,22.119L49.09,22.119C50.154,22.119 51.017,21.259 51.017,20.201L51.017,11.351Z" style="fill:rgb(46,56,64);"/>
+        </g>
+        <path d="M10.5,6.5C8.019,6.5 6,8.519 6,11C6,13.481 8.019,15.5 10.5,15.5C12.981,15.5 15,13.481 15,11C15,8.519 12.981,6.5 10.5,6.5ZM10.5,13.5C9.122,13.5 8,12.379 8,11C8,9.621 9.122,8.5 10.5,8.5C11.878,8.5 13,9.621 13,11C13,12.379 11.878,13.5 10.5,13.5Z" style="fill:rgb(234,205,35);fill-rule:nonzero;"/>
+        <circle cx="50" cy="9.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="46" cy="9.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="52" cy="12.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="48" cy="12.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="42" cy="9.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="44" cy="12.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="38" cy="9.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="40" cy="12.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="34" cy="9.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="36" cy="12.5" r="1" style="fill:rgb(234,205,35);"/>
+        <path d="M10.5,34.5C12.981,34.5 15,32.481 15,30C15,27.519 12.981,25.5 10.5,25.5C8.019,25.5 6,27.519 6,30C6,32.481 8.019,34.5 10.5,34.5ZM10.5,27.5C11.878,27.5 13,28.621 13,30C13,31.379 11.878,32.5 10.5,32.5C9.122,32.5 8,31.379 8,30C8,28.621 9.122,27.5 10.5,27.5Z" style="fill:rgb(234,205,35);fill-rule:nonzero;"/>
+        <circle cx="50" cy="28.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="46" cy="28.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="52" cy="31.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="48" cy="31.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="42" cy="28.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="44" cy="31.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="38" cy="28.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="40" cy="31.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="34" cy="28.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="36" cy="31.5" r="1" style="fill:rgb(234,205,35);"/>
+        <path d="M10.5,53.5C12.981,53.5 15,51.481 15,49C15,46.519 12.981,44.5 10.5,44.5C8.019,44.5 6,46.519 6,49C6,51.481 8.019,53.5 10.5,53.5ZM10.5,46.5C11.878,46.5 13,47.621 13,49C13,50.379 11.878,51.5 10.5,51.5C9.122,51.5 8,50.379 8,49C8,47.621 9.122,46.5 10.5,46.5Z" style="fill:rgb(234,205,35);fill-rule:nonzero;"/>
+        <circle cx="50" cy="47.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="46" cy="47.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="52" cy="50.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="48" cy="50.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="42" cy="47.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="44" cy="50.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="38" cy="47.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="40" cy="50.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="34" cy="47.5" r="1" style="fill:rgb(234,205,35);"/>
+        <circle cx="36" cy="50.5" r="1" style="fill:rgb(234,205,35);"/>
+    </g>
+</svg>

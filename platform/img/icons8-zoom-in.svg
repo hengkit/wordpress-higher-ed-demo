@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>icons8-zoom-in</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Map-Slice" transform="translate(-1155.000000, -45.000000)">
+            <g id="icons8-zoom-in" transform="translate(1156.000000, 46.000000)">
+                <polygon id="Path" fill="#1494C7" fill-rule="nonzero" points="29 25.9473684 25.9473684 29 16.7894737 19.8421053 16.7894737 16.7894737 19.8421053 16.7894737"></polygon>
+                <circle id="Oval" stroke="#1494C7" stroke-width="2" cx="9.15789474" cy="9.15789474" r="9.15789474"></circle>
+                <path d="M15.2631579,15.2631579 L19.0789474,19.0789474" id="Path" stroke="#1494C7"></path>
+                <path d="M9.15789474,4.57894737 L9.15789474,13.7368421" id="Path" stroke="#1494C7" stroke-width="2"></path>
+                <path d="M4.57894737,9.15789474 L13.7368421,9.15789474" id="Path" stroke="#1494C7" stroke-width="2"></path>
+            </g>
+        </g>
+    </g>
+</svg>

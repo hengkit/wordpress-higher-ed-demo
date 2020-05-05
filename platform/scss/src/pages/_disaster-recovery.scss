@@ -1,0 +1,15 @@
+
+/*-------------------- DISASTER RECOVERY CONTENT -------------------------*/
+#disaster-content {
+	display: none;
+}
+.disaster-container {
+	#disaster-content {
+		display: block;
+		position: relative;
+		text-align: center;
+	}
+	h4 {
+		display: none;
+	}
+}
