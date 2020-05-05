@@ -28,7 +28,6 @@ export TERMINUS_ENV=dev
 terminus site:create ${TERMINUS_SITE} "${TERMINUS_LABEL}" wordpress-demo --org="${TERMINUS_ORG}"
 
 # @todo, param for email?
-terminus wp ${TERMINUS_SITE}.dev -- core install --url=https://dev-${TERMINUS_SITE}.pantheonsite.io --title="${TERMINUS_LABEL}" --admin_user=admin --admin_password=$(openssl rand -hex 12)      --admin_email=steve.persch@pantheon.io
 terminus wp ${TERMINUS_SITE}.${TERMINUS_ENV} -- core install --url=https://dev-${TERMINUS_SITE}.pantheonsite.io --title="${TERMINUS_LABEL}" --admin_user=admin --admin_password=$(openssl rand -hex 12)      --admin_email=steve.persch@pantheon.io
 
 sleep 5
@@ -54,7 +53,6 @@ sleep 10
 terminus env:deploy ${TERMINUS_SITE}.test
 
 sleep 10
-terminus env:deploy ${TERMINUS_SITE}.liveterminus env:deploy ${TERMINUS_SITE}.liveterminus env:deploy ${TERMINUS_SITE}.liveterminus env:deploy ${TERMINUS_SITE}.live
 terminus env:deploy ${TERMINUS_SITE}.live
 
 
